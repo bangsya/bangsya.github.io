@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+body{
+    font-family: 'Inter';
+}
+
+@theme{
+    --color-dasar : oklch(0.488 0.243 264.376);
+    --color-dark : oklch(0.208 0.042 265.755);
+    --font-inter : "Inter";
+}
+
+
+.mini-icon{
+    @apply w-[40px] h-[40px] rounded-full border border-slate-500 flex items-center justify-center hover:bg-dasar hover:text-white hover:border-sky-400;
+}
+
+.fixed-nav{
+    @apply bg-white/75 fixed z-[999] backdrop-blur-[5px] inset-shadow-[0_-1px_0] inset-shadow-slate-700/20;
+}
+
+.hamburger-line {
+    @apply block w-[30px] h-[2px] bg-dark my-2;
+}
+
+.hamburger-active > span:nth-child(1) {
+    @apply rotate-45;
+}
+.hamburger-active > span:nth-child(2){
+    @apply scale-0;
+}
+.hamburger-active > span:nth-child(3){
+    @apply -rotate-45
+}
+
+.head-judul{
+    @apply font-bold text-xl mb-3;
+}
+
+.judul{
+    @apply text-4xl font-bold mb-4 lg:text-5xl;
+}
